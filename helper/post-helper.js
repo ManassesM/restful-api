@@ -8,6 +8,15 @@ const getAll = async () =>
     return data
   })
 
+// ======================> GET BY ID
+const getById = async (id) =>
+  await Post.findById(id, (err, data) => {
+    if (err) return console.log(`Erro! D: \n${err}`)
+    
+    return data
+  })
+
 module.exports = {
-  getAll
+  getAll,
+  getById
 }

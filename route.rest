@@ -3,3 +3,6 @@ GET http://localhost:3000/post/teste
 
 ### => GET ALL
 GET http://localhost:3000/post
+
+### => GET BY ID
+GET http://localhost:3000/post/

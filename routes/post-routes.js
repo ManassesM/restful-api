@@ -22,5 +22,21 @@ router.get('/', (req, res) => {
     })
 })
 
+// ======================> GET BY ID
+router.get('/:id', (req, res) => {
+
+  const id = req.params.id
+
+  helper
+    .getById(id)
+    .then(data => {
+      
+      res.send(`Retornado com sucesso!\n\n${data}`)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
+
 
 module.exports = router
