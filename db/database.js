@@ -8,7 +8,7 @@ const options  = {
 }
 
 mongoose.connect(uri, options, err => {
-  if (err) return console.log(`Erro! D:\n${err}`)
+  if(err) return console.log(`Erro! D: \n${err}`)
   
   console.log(`Conectado! :D`)
 })
