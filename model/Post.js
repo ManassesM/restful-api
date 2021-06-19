@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// SCHEMA
 const postSchema = new mongoose.Schema({
   titulo: {
     type: String,
@@ -15,4 +16,5 @@ const postSchema = new mongoose.Schema({
   }
 })
 
+// MODEL
 module.exports = mongoose.model('Post', postSchema)

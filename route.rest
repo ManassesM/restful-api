@@ -1,2 +1,5 @@
 ### => GET TEST
-GET http://localhost:3000/
+GET http://localhost:3000/post/teste
+
+### => GET ALL
+GET http://localhost:3000/post
