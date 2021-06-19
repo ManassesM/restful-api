@@ -5,11 +5,9 @@ const app = express()
 // DB
 require('./db/database')
 
-
-// ROUTER
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+// MIDDLEWARE
+const routes = require('./routes/post-routes')
+app.use('/post', routes)
 
 // SERVER
 const porta = process.env.PORTA || 3000
