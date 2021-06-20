@@ -46,10 +46,21 @@ const deleteAll = async () => {
   })
 }
 
+// ======================> DELETE BY ID
+const deletePost = async (id) => {
+  await Post.findByIdAndDelete(id, err => {
+    if (err) return console.log(`Erro! D: \n${err}`)
+    
+    return true
+  })
+}
+
+
 module.exports = {
   getAll,
   getById,
   createPost,
   updatePost,
-  deleteAll
+  deleteAll,
+  deletePost
 }

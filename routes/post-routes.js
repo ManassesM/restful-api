@@ -89,5 +89,19 @@ router.delete('/delete', (req, res) => {
     })
 })
 
+// ======================> DELETE BY ID
+router.delete('/delete/:id', (req, res) => {
+  
+  const id = req.params.id
+
+  helper
+    .deletePost(id)
+    .then(() => {
+      res.send(`Post deletado com sucesso! :D \nID ${id}`)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
 
 module.exports = router

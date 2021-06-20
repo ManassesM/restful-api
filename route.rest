@@ -27,3 +27,6 @@ Content-Type: application/json
 
 ### => DELETE ALL
 DELETE http://localhost:3000/post/delete
+
+### => DELETE BY ID
+DELETE http://localhost:3000/post/delete/:id
