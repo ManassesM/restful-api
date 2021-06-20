@@ -29,7 +29,10 @@ https://github.com/ManassesM/restful-api
 or
 > npm install
 
+# run the code
+> npm start
 
+# test the routes in route.rest file
 ```
 
 # Author
