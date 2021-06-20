@@ -5,6 +5,7 @@ const uri      = process.env.DB_CONNECT
 const options  = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false
 }
 
 mongoose.connect(uri, options, err => {

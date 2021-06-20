@@ -30,7 +30,6 @@ router.get('/:id', (req, res) => {
   helper
     .getById(id)
     .then(data => {
-      
       res.send(`Retornado com sucesso!\n\n${data}`)
     })
     .catch(err => {
@@ -49,12 +48,34 @@ router.post('/create', (req, res) => {
   helper
     .createPost(newPost)
     .then(() => {
-      
       res.send(`Criado com sucesso!\n\n${newPost}`)
     })
     .catch(err => {
       res.send(err)
     })
 })
+
+// ======================> UPDATE
+router.put('/update/:id', (req, res) => {
+
+  const id = req.params.id
+
+  const updatedPost = new Post({
+    titulo: req.body.titulo,
+    descricao: req.body.descricao
+  })
+
+  helper
+    .updatePost(id, updatedPost)
+    .then(() => {
+      res.send(`Atualizado com sucesso!\n\n${updatedPost}`)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+
+})
+
+
 
 module.exports = router

@@ -25,8 +25,21 @@ const createPost = async (newPost) => {
   })
 }
 
+// ======================> UPDATE
+const updatePost = async (id, updatedPost) => {
+  await Post.findByIdAndUpdate(id, {
+    titulo: updatedPost.titulo,
+    descricao: updatedPost.descricao
+  }, (err, data) => {
+    if (err) return console.log(`Erro! D: \n${err}`)
+    
+    return data
+  })
+}
+
 module.exports = {
   getAll,
   getById,
-  createPost
+  createPost,
+  updatePost
 }

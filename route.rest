@@ -15,3 +15,12 @@ Content-Type: application/json
   "titulo" : "Olo",
   "descricao" : "Vovo"
 }
+
+### => UPDATE
+PUT http://localhost:3000/post/update/60ce88c9d92bce34d8c64cea
+Content-Type: application/json
+
+{
+  "titulo" : "Eae",
+  "descricao" : "Galeraaa"
+}
