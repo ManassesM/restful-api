@@ -15,8 +15,18 @@ const getById = async (id) =>
     
     return data
   })
+  
+// ======================> CREATE
+const createPost = async (newPost) => {
+  await Post.create(newPost, (err, data) => {
+    if (err) return console.log(`Erro! D: \n${err}`)
+    
+    return data
+  })
+}
 
 module.exports = {
   getAll,
-  getById
+  getById,
+  createPost
 }

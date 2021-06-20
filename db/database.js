@@ -4,7 +4,7 @@ const uri      = process.env.DB_CONNECT
 
 const options  = {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 }
 
 mongoose.connect(uri, options, err => {

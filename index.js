@@ -6,6 +6,8 @@ const app = express()
 require('./db/database')
 
 // MIDDLEWARE
+app.use(express.json())
+
 const routes = require('./routes/post-routes')
 app.use('/post', routes)
 

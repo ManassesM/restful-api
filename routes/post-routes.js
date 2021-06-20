@@ -38,5 +38,23 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// ======================> CREATE
+router.post('/create', (req, res) => {
+
+  const newPost = new Post({
+    titulo: req.body.titulo,
+    descricao: req.body.descricao
+  })
+
+  helper
+    .createPost(newPost)
+    .then(() => {
+      
+      res.send(`Criado com sucesso!\n\n${newPost}`)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
 
 module.exports = router
