@@ -37,9 +37,19 @@ const updatePost = async (id, updatedPost) => {
   })
 }
 
+// ======================> DELETE ALL
+const deleteAll = async () => {
+  await Post.deleteMany({}, err => {
+    if (err) return console.log(`Erro! D: \n${err}`)
+    
+    return true
+  })
+}
+
 module.exports = {
   getAll,
   getById,
   createPost,
-  updatePost
+  updatePost,
+  deleteAll
 }

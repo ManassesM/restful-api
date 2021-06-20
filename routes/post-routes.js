@@ -76,6 +76,18 @@ router.put('/update/:id', (req, res) => {
 
 })
 
+// ======================> DELETE ALL
+router.delete('/delete', (req, res) => {
+
+  helper
+    .deleteAll()
+    .then(() => {
+      res.send(`Todos os posts foram deletados com sucesso! :D`)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
 
 
 module.exports = router

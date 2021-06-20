@@ -5,7 +5,7 @@ GET http://localhost:3000/post/teste
 GET http://localhost:3000/post
 
 ### => GET BY ID
-GET http://localhost:3000/post/60ce88c7d92bce34d8c64ce8
+GET http://localhost:3000/post/60ce88c9d92bce34d8c64cea
 
 ### => CREATE
 POST http://localhost:3000/post/create
@@ -24,3 +24,6 @@ Content-Type: application/json
   "titulo" : "Eae",
   "descricao" : "Galeraaa"
 }
+
+### => DELETE ALL
+DELETE http://localhost:3000/post/delete
